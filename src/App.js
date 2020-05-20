@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Login from './Login/Login';
+import ForgotPassword from './Login/ForgotPassword';
+import Registration from './Login/Registration';
+import CreateNewPassword from './Login/CreateNewPassword';
+import Navigation from './Navigation';
+import Home from './File/Home';
+import Customer from './File/Customer';
+import AboutUs from './File/AboutUs';
+import ContactUs from './File/ContactUs';
+import Card from './File/Card';
+import EditProfile from './File/EditProfile';
+import ChangePassword from './File/ChangePassword';
+import Protected from './Login/Protected';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/" component={Login} />
+                <Route exact path="/ForgotPassword" component={ForgotPassword} />
+                <Route exact path="/Registration" component={Registration} />
+                <Route exact path="/CreateNewPassword" component={CreateNewPassword} />
+                <Protected exact path="/Navigation" component={Navigation} />
+                <Protected exact path="/Home" component={Home} />
+                <Protected exact path="/Customer" component={Customer} />
+                <Protected exact path="/AboutUs" component={AboutUs} />
+                <Protected exact path="/ContactUs" component={ContactUs} />
+                <Protected exact path="/Card" component={Card} />
+                <Protected exact path="/EditProfile" component={EditProfile} />
+                <Protected exact path="/ChangePassword" component={ChangePassword} />
+                {/* <ProtectedRoute exact path="*" component={Login} /> */}
+            </Switch>
+        </BrowserRouter>
+    )
 }
 
 export default App;

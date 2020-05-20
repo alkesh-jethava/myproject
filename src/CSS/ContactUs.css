@@ -1,0 +1,53 @@
+.a{
+   height: 500px;
+   width: 800px;
+   border: none;
+}
+.CUmainDiv{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.CUinputDiv{
+   margin-top: 20%;
+}
+
+.username{
+   width: 350px;
+    padding: 10px;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+    letter-spacing: 1px;
+    border-color: gray;
+    border-width: 0.5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.email{
+   width: 350px;
+    padding: 10px;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+    letter-spacing: 1px;
+    border-color: gray;
+    border-width: 0.5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.msg{
+   height: 200px;
+   width: 350px;
+    padding: 10px;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+    letter-spacing: 1px;
+    border-color: gray;
+    border-width: 0.5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
